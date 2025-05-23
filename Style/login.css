@@ -10,16 +10,26 @@ body{
 }
 
 .header{
-    color: white;
+ color: white;
 font-family: 'inter';
-font-size: 2.563rem;
+font-size: 3rem;
 font-weight: 500;
 margin: 5%;
 }
 .guess{
 font-weight: 900;
-font-size: 4rem;
+font-size: 5rem;
 }
+.login-form{
+    border-style: solid;
+    border-radius: 5%;
+    padding:100px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;  
+}
+
 .profile-image{
     height: 100%;
     display: flex;
@@ -37,12 +47,12 @@ align-items: center;
 .add-username{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 100%;
 }
 .login-text{
     color: white;
     font-family: 'inter';
-    
+
 }
 #username{
     border-radius: 10px;
@@ -58,8 +68,8 @@ align-items: center;
     border-style:groove;
     padding: 5%;
 }
-.login-form{
-    border-style: solid;
-    border-radius: 5%;
-    padding: 50px;
+
+#login-btn:hover{
+    background-color:#8D4BAE;
+    cursor: pointer;
 }

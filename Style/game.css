@@ -55,3 +55,7 @@ p{
     border-style:groove;
     padding: 5%;
 }
+.submit:hover{
+    background-color:#8D4BAE;
+    cursor: pointer;
+}
