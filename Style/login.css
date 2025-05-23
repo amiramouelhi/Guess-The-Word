@@ -1,0 +1,65 @@
+
+body{
+    background: linear-gradient(90deg,rgba(190, 190, 209, 1) 0%, rgba(75, 75, 184, 1) 54%, rgba(0, 212, 255, 1) 100%);   
+}
+.log-in{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ height: 50%;   
+}
+
+.header{
+    color: white;
+font-family: 'inter';
+font-size: 2.563rem;
+font-weight: 500;
+margin: 5%;
+}
+.guess{
+font-weight: 900;
+font-size: 4rem;
+}
+.profile-image{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#avatar{
+align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 3%;
+}
+.add-username{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.login-text{
+    color: white;
+    font-family: 'inter';
+    
+}
+#username{
+    border-radius: 10px;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+#login-btn{
+    background-color: blueviolet;
+    color:white;
+    font-family: 'inter';
+    margin-top: 3px;
+    border-radius: 10px;
+    border-style:groove;
+    padding: 5%;
+}
+.login-form{
+    border-style: solid;
+    border-radius: 5%;
+    padding: 50px;
+}

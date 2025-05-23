@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="../Style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="log-in">
+      <h1 class="header">
+        Welcome <br />to <br /><span class="guess">Guess!</span>
+      </h1>
+      <form class="login-form">
+        <div class="profile-image">
+          <img
+            id="avatar"
+            src="../Media/default-pfp.png"
+            alt="profile-picture"
+          />
+          <input type="file" />
+          <!-- <button id="change-avatar">+</button> -->
+        </div>
+        <form class="add-username">
+          <h4 class="login-text">Log in:</h4>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+          />
+          <button id="login-btn">Play Game</button>
+        </form>
+      </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../Script/login.js"></script>
+  </body>
+</html>
