@@ -1,9 +1,7 @@
 body{
 background: linear-gradient(90deg,rgba(190, 190, 209, 1) 0%, rgba(75, 75, 184, 1) 54%, rgba(0, 212, 255, 1) 100%);   
 }
-/* .box{
-    height: 100%;
-} */
+
 .game-box{
     background-color: aliceblue;
     border-style: solid;
@@ -16,6 +14,7 @@ background: linear-gradient(90deg,rgba(190, 190, 209, 1) 0%, rgba(75, 75, 184, 1
     margin: auto  ;
     margin-top: 10%;
 }
+
 .div-title{
     color: #524ED3;
     font-family: 'inter';
@@ -33,7 +32,7 @@ b{
 .guess-input{
 display: flex;
 flex-direction: column;
-margin:5%
+margin:5%;
 }
 p{
     font-family: 'inter';
@@ -54,8 +53,18 @@ p{
     border-radius: 10px;
     border-style:groove;
     padding: 5%;
+    width: 100%;
+}
+#hint:hover{
+background-color:#8D4BAE;
+    cursor: pointer;
 }
 .submit:hover{
     background-color:#8D4BAE;
     cursor: pointer;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

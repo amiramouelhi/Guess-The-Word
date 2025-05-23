@@ -14,17 +14,30 @@
   </head>
   <body>
     <section class="game-box">
+      <div class="chrono">
+        <p id="timer">Time left: <span id="time">60</span> seconds</p>
+      </div>
       <h1 class="div-title">Guess the word</h1>
       <div class="hint"><b>Hint: </b><span class="given-hint"></span></div>
       <div class="secret-word">
-        <span class="secret-letter">_</span>
+        <span class="secret-letter"></span>
       </div>
       <form class="guess-input">
         <div class="guessing">
           <p>Guess one letter:</p>
           <input type="text" id="guessed-letter" name="letter" maxlength="1" />
         </div>
-        <button class="submit">Submit</button>
+        <div class="buttons">
+          <button class="submit">Submit</button>
+          <input
+            type="image"
+            src="../Media/icons8-hint-48.png"
+            id="hint-text"
+            alt="Hint"
+            width="48"
+            height="48"
+          />
+        </div>
       </form>
     </section>
     <script src="../Script/game.js"></script>
