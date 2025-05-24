@@ -5,51 +5,69 @@ var words = [
   { word: "bridge", hint: "Used to cross rivers." },
   { word: "castle", hint: "A medieval fortress." }
 ];
+var spanElement=document.querySelector(".secret-letter");
+var wordIndex;
+var secretWord;
+var masked;
+var maskedword=[];
+//initializing the game
+function initializegame(){
+ wordIndex=Math.floor(Math.random()*words.length);
+ secretWord=words[wordIndex].word;
+ masked=secretWord[0];
 
-var wordIndex=Math.floor(Math.random()*words.length);
-var secretWord=words[wordIndex].word;
-var masked=secretWord[0];
-var i=1;
-while(i<secretWord.length-1){
-    masked=masked+'_'
-    i++
+//initializing the masked word to show
+for(var i=1;i<secretWord.length-1;i++){
+    masked=masked+'_';
 }
+
 masked=masked+secretWord[secretWord.length-1];
 
 //store masked word in an array so i can change individual letters
-var maskedword=[];
-for(var i=0;i<masked.length;i++){
-    maskedword.push(masked[i])
-}
+maskedword=masked.split('');
 
 //updating the secret word span
-var spanElement=document.querySelector(".secret-letter");
+
 spanElement.textContent=masked;
+
+//clear hint display and the input field
+document.querySelector('.given-hint').textContent = '';
+document.getElementById('guessed-letter').value = '';
+}
+
 
 
 var submitbtn=document.querySelector('.submit');
 submitbtn.addEventListener('click',function(e){
 e.preventDefault()
+
     //getting the value from input field
 var input=document.getElementById('guessed-letter').value.toLowerCase();
 var isCorrect=false;
+
 //checking if the guessed letter is correct
 for(var i=0;i<secretWord.length;i++){
     
     //check if the letter is in secretWord
     if(secretWord[i]===input){
+
         //update the array we created with masked word
         maskedword[i]=input;
         isCorrect=true;     
     }}
 
-        if(isCorrect ===true){
+        if(isCorrect){
         //updating the UI
         spanElement.textContent=maskedword.join('');
+        if(maskedword.join('')===secretWord){
+            score=score+10;
+            alert('🎉 Good job! You guessed the word!');
+            initializegame();
         }
-        else{
-            alert('Wrong guess')
+        }else{
+            alert('Wrong guess, try again')
         }
+        
    
 //clear the input field
 document.getElementById('guessed-letter').value = '';
