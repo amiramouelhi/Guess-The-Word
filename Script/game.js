@@ -35,7 +35,7 @@ document.querySelector('.given-hint').textContent = '';
 document.getElementById('guessed-letter').value = '';
 }
 
-
+initializegame();
 
 var submitbtn=document.querySelector('.submit');
 submitbtn.addEventListener('click',function(e){
@@ -57,10 +57,11 @@ for(var i=0;i<secretWord.length;i++){
     }}
 
         if(isCorrect){
+
         //updating the UI
         spanElement.textContent=maskedword.join('');
+
         if(maskedword.join('')===secretWord){
-            score=score+10;
             alert('🎉 Good job! You guessed the word!');
             initializegame();
         }
