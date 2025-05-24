@@ -68,3 +68,6 @@ background-color:#8D4BAE;
     flex-direction: row;
     justify-content: space-between;
 }
+.given-hint{
+    font-family: 'inter';
+}
