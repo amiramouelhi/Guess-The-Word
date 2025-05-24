@@ -10,6 +10,30 @@ var wordIndex;
 var secretWord;
 var masked;
 var maskedword=[];
+//mainipulating the timer
+var timeLeft=60;
+var timeInterval;
+
+function startTimer(){
+    //reset timer
+    clearInterval(timeInterval);
+    timeLeft=60;
+    
+    document.getElementById("time").textContent=timeLeft;
+
+    timeInterval=setInterval(function(){
+        timeLeft--;
+        //updating the UI every second
+        document.getElementById('time').textContent=timeLeft;
+
+        if(timeLeft<=0){
+            clearInterval(timeInterval);
+            alert('Time is up!');
+            initializegame();
+            startTimer();
+        }
+    },1000)
+}
 //initializing the game
 function initializegame(){
  wordIndex=Math.floor(Math.random()*words.length);
@@ -36,6 +60,7 @@ document.getElementById('guessed-letter').value = '';
 }
 
 initializegame();
+startTimer();
 
 var submitbtn=document.querySelector('.submit');
 submitbtn.addEventListener('click',function(e){
@@ -64,6 +89,7 @@ for(var i=0;i<secretWord.length;i++){
         if(maskedword.join('')===secretWord){
             alert('🎉 Good job! You guessed the word!');
             initializegame();
+            startTimer();
         }
         }else{
             alert('Wrong guess, try again')
