@@ -15,10 +15,8 @@ e.preventDefault()
 var input=document.getElementById("username").value
 var user={
     username:input,
-    profilePicture:img.src,
-    score:0,
+    profilePicture:img.src
 };
-localStorage.setItem("user",JSON.stringify(user))
 window.location.href='http://127.0.0.1:5500/UI/game.html?letter='
 })
 
